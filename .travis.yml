@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+berfore_install:
+  - docker build -t myersultan/docker-react -f Dockerfile.devv .
+
+script:
+  -  docker run myersultan/docker-react npm run test -- --coverage
