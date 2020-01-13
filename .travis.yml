@@ -3,7 +3,7 @@ services:
   - docker
 
 berfore_install:
-  - docker build -t myersultan/docker-react -f Dockerfile.devv .
+  - docker build -t myersultan/docker-react -f Dockerfile.dev .
 
 script:
   -  docker run myersultan/docker-react npm run test -- --coverage
